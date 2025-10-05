@@ -35,3 +35,48 @@
 .calculator .buttons button:hover {
 	background: #838383;
 }
+
+#opciones {
+    text-align: center;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+}
+
+#opciones h2 {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+#opciones button {
+    display: block;
+    width: 300px;
+    margin: 10px auto;
+    padding: 12px 20px;
+    font-size: 16px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#opciones button:hover {
+    background-color: #45a049;
+}
+
+#opciones #salida {
+    background-color: #f44336;
+}
+
+#opciones #salida:hover {
+    background-color: #da190b;
+}
+
+#opciones #limpieza {
+	background-color: #009fd4;
+}
+
+#opciones #limpieza:hover {
+	background-color: #007bb5;
+}

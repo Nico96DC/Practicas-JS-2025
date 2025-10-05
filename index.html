@@ -4,55 +4,46 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Equis</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- <h1>Clase 1 de JS</h1>
-    <div class="calculator">
-        <input type="text" id="display" disabled />
-        <div class="buttons">
-            <button onclick="appendNumber('7')">7</button>
-            <button onclick="appendNumber('8')">8</button>
-            <button onclick="appendNumber('9')">9</button>
-            <button onclick="chooseOperation('/')">/</button>
-            <br>
-            <button onclick="appendNumber('4')">4</button>
-            <button onclick="appendNumber('5')">5</button>
-            <button onclick="appendNumber('6')">6</button>
-            <button onclick="chooseOperation('*')">*</button>
-            <br>
-            <button onclick="appendNumber('1')">1</button>
-            <button onclick="appendNumber('2')">2</button>
-            <button onclick="appendNumber('3')">3</button>
-            <button onclick="chooseOperation('-')">-</button>
-            <br>
-            <button onclick="appendNumber('0')">0</button>
-            <button onclick="appendNumber('.')">.</button>
-            <button onclick="compute()">=</button>
-            <button onclick="chooseOperation('+')">+</button>
-            <br>
-            <button onclick="clearDisplay()">C</button>
-        </div>
-    </div> -->
-    <link rel="stylesheet" href="styles.css">
-    <!-- <script src = "scripts/calc.js"></script> -->
+    <div id="opciones">
+        <h2>Selecciona qué script deseas ejecutar:</h2>
+        <button id="btnSintaxis">1. Ejercicios de sintaxis</button>
+        <button id="btnEstructuras">2. Ejercicios de estructuras de control</button>
+        <button id="btnFunciones">3. Ejercicios de funciones</button>
+    </div>
+
     <script>
-    let pregunta = confirm("¿Deseas ejecutar un script?");
-    if (pregunta) {
-        let elecPrincipal = prompt("¿Qué script deseas ejecutar?\n1. Ejercicios de sintaxis\n2. Ejercicios de estructuras de control\n3. Ejercicios de funciones\n\nPresiona otro número para salir.");
-        if (elecPrincipal == 1) {
+        // Función global para cargar un script
+        window.cargarScript = function(ruta) {
+            // Limpiar scripts anteriores si los hay
+            const scriptsAnteriores = document.querySelectorAll('script[data-cargado="true"]');
+            scriptsAnteriores.forEach(script => script.remove());
+            
             let script = document.createElement("script");
-            script.src = "scripts/ejerciciosClase2-1.js";
-            document.body.appendChild(script);
-        } else if (elecPrincipal == 2) {
-            let script = document.createElement("script");
-            script.src = "scripts/ejerciciosClase2-2.js";
-            document.body.appendChild(script);
-        } else if (elecPrincipal == 3) {
-            let script = document.createElement("script");
-            script.src = "scripts/ejerciciosClase2-3.js";
+            script.src = ruta;
+            script.setAttribute("data-cargado", "true");
             document.body.appendChild(script);
         }
-    }
+
+        // Función global para reasignar eventos
+        window.reassignEvents = function() {
+            document.getElementById('btnSintaxis').addEventListener('click', function() {
+                window.location.href = "html/01-sintaxis.html";
+            });
+
+            document.getElementById('btnEstructuras').addEventListener('click', function() {
+                window.location.href = "html/02-estructuras.html";
+            });
+
+            document.getElementById('btnFunciones').addEventListener('click', function() {
+                window.location.href = "html/03-funciones.html";
+            });
+        }
+
+        // Asignar eventos iniciales
+        reassignEvents();
     </script>
 </body>
 </html>
