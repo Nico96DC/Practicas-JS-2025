@@ -1,0 +1,35 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2, h3 {
+    color: #333;
+    font-size: 1.5rem;
+    margin: .5em 0;
+}
+hr {
+    border: 0;
+    height: 2px;
+    background: #7c7c7c;
+    margin: 1em 0;
+}
+p {
+    margin: 0 0 1em;
+}
+
+main {
+    padding: 1em;
+}
+
+section, aside {
+    margin-bottom: 1em;
+    padding: 1em;
+    border: 5px solid #7e7e7e;
+    border-radius: 25px;
+}
+section {
+    background-color: #acf5c9;
+}
