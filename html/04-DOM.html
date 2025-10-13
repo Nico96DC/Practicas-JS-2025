@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicios de eventos</title>
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+    <script>
+        console.log("** Ejercicios de eventos **");
+    </script>
+    <div>
+        <h1>Parte 4: Manipulación del DOM</h1>
+        <h2>Selecciona el script a ejecutar:</h2>
+        <button id="ej1">1. Cambio de texto por ID.</button>
+        <p id="textoEj1">Texto del ejercicio 1.</p>
+
+        <button id="ej2">2. Cambio de fondo de un elemento ante clic.</button>
+        <p id="textoEj2">Texto del ejercicio 2 (color negro).</p>
+
+    <!--         
+        <button id="ej3">3. Cambio de texto de todos los elementos de una clase.</button>
+        <button id="ej4">4. Nueva clase a un elemento seleccionado.</button>
+        <button id="ej5">5. Elimina una clase existente de un elemento.</button>
+        <button id="ej6">6. Cambia el contenido HTML de un div usando innerHTML.</button>
+        <button id="ej7">7. Muestra en la consola el texto de un párrafo seleccionado.</button>
+        <button id="ej8">8. Usa querySelectorAll para seleccionar múltiples elementos y recorrerlos con un bucle.</button>
+        <button id="ej9">9. Crea un botón que, al hacer clic, oculte un párrafo.</button>
+        <button id="ej10">10. Agrega un nuevo elemento HTML a un contenedor existente.</button>
+    -->
+    </div>
+    <script src="../scripts/ejerciciosClase3-1.js"></script>
+    <script>
+        document.getElementById('ej1').addEventListener('click', function() {
+            ejercicio1();
+        });
+        document.getElementById('ej2').addEventListener('click', function() {
+            ejercicio2();
+        });
+        /*
+        document.getElementById('ej3').addEventListener('click', function() {
+            ejercicio3();
+        });
+        document.getElementById('ej4').addEventListener('click', function() {
+            ejercicio4();
+        });
+        document.getElementById('ej5').addEventListener('click', function() {
+            ejercicio5();
+        });
+        document.getElementById('ej6').addEventListener('click', function() {
+            ejercicio6();
+        });
+        document.getElementById('ej7').addEventListener('click', function() {
+            ejercicio7();
+        });
+        document.getElementById('ej8').addEventListener('click', function() {
+            ejercicio8();
+        }); 
+        document.getElementById('ej9').addEventListener('click', function() {
+            ejercicio9();
+        });
+        document.getElementById('ej10').addEventListener('click', function() {
+            ejercicio10();
+        });
+        */
+    </script>
+</body>
+</html>

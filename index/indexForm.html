@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario Interactivo</title>
+    <style>
+        .error {
+            color: red;
+            font-size: 0.9em;
+        }
+
+        .success {
+            color: green;
+            font-size: 1em;
+        }
+    </style>
+</head>
+<body>
+    <form id="miFormulario">
+        <label for="campoTexto">Nombre:</label>
+        <input type="text" id="campoTexto" placeholder="Escribe tu nombre">
+        <span id="mensajeError" class="error"></span>
+        <br><br>
+        <button type="submit">Enviar</button>
+    </form>
+    <p id="mensajeExito" class="success" style="display:none;">Formulario enviado con éxito.</p>
+    <script>
+        const campoTexto = document.getElementById("campoTexto");
+        const mensajeError = document.getElementById("mensajeError");
+        const formulario = document.getElementById("miFormulario");
+        const mensajeExito = document.getElementById("mensajeExito");
+        // Validación en tiempo real
+        campoTexto.addEventListener("input", () => {
+            if (campoTexto.value.trim() === "") {
+                mensajeError.textContent = "Este campo no puede estar vacío.";
+            } else {
+                mensajeError.textContent = "";
+            }
+        });
+        // Mensaje de confirmación al enviar
+        formulario.addEventListener("submit", (event) => {
+            event.preventDefault();
+            if (campoTexto.value.trim() === "") {
+                mensajeError.textContent = "Por favor, completa el campo antes de enviar.";
+            } else {
+                mensajeExito.style.display = "block";
+                formulario.reset();
+            }
+        });
+    </script>
+</body>
+</html>

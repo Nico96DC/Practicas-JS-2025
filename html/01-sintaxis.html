@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicios de sintaxis</title>
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+    <script>
+        console.log("* Ejercicios de sintaxis *");
+    </script>
+    <div id="opciones">
+        <h1>Parte 1: Variables y operadores</h1>
+        <h2>Selecciona el script de sintaxis a ejecutar:</h2>
+        <button id="ej1">1. Variable con nombre</button>
+        <button id="ej2">2. Suma de dos números</button>
+        <button id="ej3">3. Operadores lógicos</button>
+        <button id="ej4">4. let y const</button>
+        <button id="ej5">5. Comentario explicativo</button>
+        <button id="ej6">6. Variable boolean y operación lógica</button>
+        <button id="ej7">7. Tipo de dato con typeof</button>
+        <button id="ej8">8. Declarar un array</button>
+        <button id="ej9">9. Operación con %</button>
+        <button id="ej10">10. Variable sin valor inicial</button>
+        <button id="limpieza">Limpiar consola</button>
+        <button id="salida">Volver al menú anterior</button>
+    </div>
+    <script src="../scripts/ejerciciosClase2-1.js"></script>
+    <script>
+        document.getElementById('ej1').addEventListener('click', function() {
+            ejercicio1();
+        });
+        document.getElementById('ej2').addEventListener('click', function() {
+            ejercicio2();
+        });
+        document.getElementById('ej3').addEventListener('click', function() {
+            ejercicio3();
+        });
+        document.getElementById('ej4').addEventListener('click', function() {
+            ejercicio4();
+        });
+        document.getElementById('ej5').addEventListener('click', function() {
+            ejercicio5();
+        });
+        document.getElementById('ej6').addEventListener('click', function() {
+            ejercicio6();
+        });
+        document.getElementById('ej7').addEventListener('click', function() {
+            ejercicio7();
+        });
+        document.getElementById('ej8').addEventListener('click', function() {
+            ejercicio8();
+        });
+        document.getElementById('ej9').addEventListener('click', function() {
+            ejercicio9();
+        });
+        document.getElementById('ej10').addEventListener('click', function() {
+            ejercicio10();
+        });
+        document.getElementById('limpieza').addEventListener('click', function() {
+            console.clear();
+        });
+        document.getElementById('salida').addEventListener('click', function() {
+            console.clear();
+            window.location.href = "../index.html";
+        });
+    </script>
+</body>
+</html>

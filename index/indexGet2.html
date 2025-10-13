@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicios de Manipulación del DOM</title>
+    <style>
+        .oculto {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="encabezado">Texto Original</h1>
+    <p id="parrafo">Texto del párrafo.</p>
+    <div id="contenedor"></div>
+    <button id="btnCambiar">Cambiar contenido</button>
+    <button id="btnOcultar">Ocultar párrafo</button>
+    <script>
+        // Ejercicios en JavaScript
+        const encabezado = document.getElementById("encabezado");
+        const parrafo = document.getElementById("parrafo");
+        const botonCambiar = document.getElementById("btnCambiar");
+        const botonOcultar = document.getElementById("btnOcultar");
+
+        // Cambiar texto
+        botonCambiar.addEventListener("click", () => {
+            encabezado.textContent = "Texto cambiado";
+            parrafo.style.backgroundColor = "lightblue";
+        });
+
+        // Ocultar párrafo
+        botonOcultar.addEventListener("click", () => {
+            parrafo.style.display = "none";
+        });
+
+        // Agregar nuevo contenido
+        const contenedor = document.getElementById("contenedor");
+        const nuevoElemento = document.createElement("p");
+        nuevoElemento.textContent = "Nuevo párrafo agregado dinámicamente.";
+        contenedor.appendChild(nuevoElemento);
+    </script>
+</body>
+</html>
