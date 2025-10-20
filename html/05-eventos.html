@@ -5,26 +5,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ejercicios de eventos</title>
     <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
 </head>
 <body>
     <script>
         console.log("** Ejercicios de eventos **");
     </script>
-    <div>
+    <div id="opciones">
         <h1>Parte 4: Manipulación del DOM</h1>
         <h2>Selecciona el script a ejecutar:</h2>
         <button id="ej1">1. Mensaje en consola ante un clic.</button>
-        <button id="ej2">2. Cambio de color de un texto.</button>
-        <!-- Seguir desde acá -->
+        <button id="ej2">2. Cambio de color de un texto al escribir.</button>
+        <input id="textoEj2"></input>
         <button id="ej3">3. Contador ascendente con un botón.</button>
+        <button id="botonEj3">Contar</button>
+        <p id="contEj3"></p>
+
+        <!-- 
         <button id="ej4">4. Mensaje de error en campo vacío de un formulario.</button>
         <button id="ej5">5. Posición de un elemento con hover.</button>
         <button id="ej6">6. Muestra de una tecla presionada.</button>
         <button id="ej7">7. Toggle de un elemento.</button>
         <button id="ej8">8. Lista dropdown.</button>
-        <!-- Hacer estos para subirlos -->
         <button id="ej9">9. Validación de correos electrónicos.</button>
         <button id="ej0">10. Cambio de texto ante un clic.</button>
+         -->
+        <button id="limpieza">Limpiar consola</button>
+        <button id="salida">Volver al menú anterior</button>
     </div>
     <script src="../scripts/ejerciciosClase3-2.js"></script>
     <script>
@@ -37,6 +44,7 @@
         document.getElementById('ej3').addEventListener('click', function() {
             ejercicio3();
         });
+        /*
         document.getElementById('ej4').addEventListener('click', function() {
             ejercicio4();
         });
@@ -57,6 +65,14 @@
         });
         document.getElementById('ej10').addEventListener('click', function() {
             ejercicio10();
+        });
+        */
+        document.getElementById('limpieza').addEventListener('click', function() {
+            console.clear();
+        });
+        document.getElementById('salida').addEventListener('click', function() {
+            console.clear();
+            window.location.href = "../index/indexEjercicios.html";
         });
     </script>
 </body>

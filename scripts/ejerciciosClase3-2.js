@@ -1,15 +1,30 @@
 function ejercicio1() {
     console.log("1. Crea un botón que muestre un mensaje en consola al hacer clic.");
-    const button = document.createElement('button');
-    button.textContent = 'Clic';
+    document.getElementById('ej1');
+    console.log("Botón clickeado.");
+    alert("Botón clickeado.");
 }
 
 function ejercicio2() {
     console.log("2. Haz que un campo de texto cambie su color de fondo al escribir en él.");
+    document.getElementById('ej2');
+    const texto = document.getElementById('textoEj2');
+    texto.addEventListener('input', function () {
+        this.style.backgroundColor = 'lightgreen';
+    }); 
 }
 
 function ejercicio3() {
     console.log("3. Implementa un contador que aumente cada vez que se haga clic en un botón.");
+    document.getElementById('ej3');
+    let conteo = 0;
+    const boton = document.getElementById('botonEj3');
+    boton.addEventListener('click', function () {
+        conteo++;
+        this.innerText = `Contador: ${conteo}`
+        contador.textContent = conteo;
+        return conteo;
+    });
 }
 
 function ejercicio4() {

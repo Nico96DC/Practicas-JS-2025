@@ -1,3 +1,66 @@
+// Persona, numero, fruta, auto, musica
+const Persona = {
+    nombre: "Raul",
+    apellido: "Lopez",
+    edad: 25,
+    ciudad: "Maipú",
+
+    saludo: function() {
+        return `Hola, mi nombre es ${this.nombre} ${this.apellido}, tengo ${this.edad} años y vivo en ${this.ciudad}.`;
+    }
+};
+console.log(`Nombre completo: ${Persona.nombre} ${Persona.apellido}\nEdad: ${Persona.edad} años\nCiudad: ${Persona.ciudad}`);
+console.log(Persona.saludo());
+
+const numeros = {
+    num1: 16,
+    num2: 8,
+    num3: 72,
+    num4: 1,
+
+    suma: function() {
+        return this.num1 + this.num2 + this.num3 + this.num4;
+    }
+}
+console.log(`Números ingresados: [${numeros.num1}, ${numeros.num2}, ${numeros.num3}, ${numeros.num4}]`);
+console.log(`Suma de ${numeros.num1}, ${numeros.num2}, ${numeros.num3} y ${numeros.num4} es ${numeros.suma()}`);
+
+const frutas = {
+    fruta1: "Manzana",
+    fruta2: "Banana",
+    fruta3: "Cereza",
+    fruta4: "Durazno",
+
+    listado: function() {
+        return `Frutas: ${this.fruta1}, ${this.fruta2}, ${this.fruta3}, ${this.fruta4}.`;
+    }
+}
+console.log(frutas.listado());
+
+const auto = {
+    marca: "Toyota",
+    modelo: "Corolla",
+    año: 2020,
+    color: "Blanco",
+
+    descripcion: function() {
+        return `Auto: ${this.marca} ${this.modelo}, Año: ${this.año}, Color: ${this.color}.`;
+    }
+}
+console.log(auto.descripcion());
+
+const musica = {
+    genero: "Rock",
+    artista: "Queen",
+    cancion: "Bohemian Rhapsody",
+
+    cancionFavorita: function() {
+        return `Mi canción favorita es "${this.cancion}" de ${this.artista}, del género ${this.genero}.`;
+    }
+}
+console.log(musica.cancionFavorita());
+
+/*
 function limpiarConsola() {
     let limpiado;
     do {
@@ -56,3 +119,4 @@ do {
         respuesta = prompt("¿Deseas realizar otra operación? (s/n):").toLowerCase();
     } while (respuesta !== 's' && respuesta !== 'n');
 } while (respuesta !== 'n');
+*/
