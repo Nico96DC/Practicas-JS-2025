@@ -4,14 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Equis</title>
-    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
     <div id="opciones">
-        <h2>Selecciona qué script deseas ejecutar:</h2>
-        <button id="btnSintaxis">1. Ejercicios de sintaxis</button>
-        <button id="btnEstructuras">2. Ejercicios de estructuras de control</button>
-        <button id="btnFunciones">3. Ejercicios de funciones</button>
+        <h2>Selecciona el index a ejecutar:</h2>
+        <button id="btnEjercicios">1. Index de ejercicios</button>
+        <button id="btnConsola">2. Index en consola</button>
+        <button id="btnCertif">3. Index de certificación</button>
+        <button id="btnGet">4. Index de elementos</button>
+        <button id="btnGet2">6. Index de elementos actual</button>
+        <button id="btnEventos">5. Index de eventos</button>
+        <button id="btnForm">7. Index de formulario interactivo</button>
     </div>
 
     <script>
@@ -29,19 +33,34 @@
 
         // Función global para reasignar eventos
         window.reassignEvents = function() {
-            document.getElementById('btnSintaxis').addEventListener('click', function() {
-                window.location.href = "html/01-sintaxis.html";
+            document.getElementById('btnEjercicios').addEventListener('click', function() {
+                window.location.href = "index/indexEjercicios.html";
             });
 
-            document.getElementById('btnEstructuras').addEventListener('click', function() {
-                window.location.href = "html/02-estructuras.html";
+            document.getElementById('btnConsola').addEventListener('click', function() {
+                window.location.href = "index/indexConsola.html";
             });
 
-            document.getElementById('btnFunciones').addEventListener('click', function() {
-                window.location.href = "html/03-funciones.html";
+            document.getElementById('btnCertif').addEventListener('click', function() {
+                window.location.href = "index/indexCertif.html";
+            });
+            
+            document.getElementById('btnGet').addEventListener('click', function() {
+                window.location.href = "index/indexGet.html";
+            });
+
+            document.getElementById('btnGet2').addEventListener('click', function() {
+                window.location.href = "index/indexGet2.html";
+            });
+
+            document.getElementById('btnEventos').addEventListener('click', function() {
+                window.location.href = "index/indexEventos.html";
+            });
+
+            document.getElementById('btnForm').addEventListener('click', function() {
+                window.location.href = "index/indexForm.html";
             });
         }
-
         // Asignar eventos iniciales
         reassignEvents();
     </script>

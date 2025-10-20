@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Equis</title>
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+    <div id="opciones">
+        <h2>Selecciona qué script deseas ejecutar:</h2>
+        <button id="btnSintaxis">1. Sintaxis</button>
+        <button id="btnEstructuras">2. Estructuras de control</button>
+        <button id="btnFunciones">3. Funciones</button>
+        <button id="btnDOM">4. Manipulación del DOM</button>
+        <button id="btnEventos">5. Eventos</button>
+        <button id="btnArreglos">6. Arreglos y objetos</button>
+    </div>
+
+    <script>
+        // Función global para cargar un script
+        window.cargarScript = function(ruta) {
+            // Limpiar scripts anteriores si los hay
+            const scriptsAnteriores = document.querySelectorAll('script[data-cargado="true"]');
+            scriptsAnteriores.forEach(script => script.remove());
+            
+            let script = document.createElement("script");
+            script.src = ruta;
+            script.setAttribute("data-cargado", "true");
+            document.body.appendChild(script);
+        }
+
+        // Función global para reasignar eventos
+        window.reassignEvents = function() {
+            document.getElementById('btnSintaxis').addEventListener('click', function() {
+                window.location.href = "../html/01-sintaxis.html";
+            });
+
+            document.getElementById('btnEstructuras').addEventListener('click', function() {
+                window.location.href = "../html/02-estructuras.html";
+            });
+
+            document.getElementById('btnFunciones').addEventListener('click', function() {
+                window.location.href = "../html/03-funciones.html";
+            });
+
+            document.getElementById('btnDOM').addEventListener('click', function() {
+                window.location.href = "../html/04-DOM.html";
+            });
+
+            document.getElementById('btnEventos').addEventListener('click', function() {
+                window.location.href = "../html/05-eventos.html";
+            });
+
+            document.getElementById('btnArreglos').addEventListener('click', function() {
+                window.location.href = "../html/06-arreglosYObjetos.html";
+            });
+        }
+
+        // Asignar eventos iniciales
+        reassignEvents();
+    </script>
+</body>
+</html>

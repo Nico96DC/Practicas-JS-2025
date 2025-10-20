@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Usos de document</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <main>
+        <section>
+            <h1>1️⃣ document.getElementById(id)</h1>
+            <p id="mensaje">Texto de ejemplo</p>
+            <hr>
+            <h2 id="titulo">Hola Mundo</h2>
+            <hr>
+            <input id="nombre" type="text" placeholder="Escribe tu nombre">
+            <!-- <button>Enviar</button> -->
+            <script>
+                // Cambios en el texto ingresado
+                const parrafo = document.getElementById('mensaje');
+                parrafo.innerText = "Texto anterior modificado con getElementById (decía 'Texto de ejemplo')";
+
+                // Cambios en el estilo del título
+                const titulo = document.getElementById('titulo');
+                titulo.style.color = 'black';
+                titulo.style.backgroundColor = 'pink';
+                titulo.style.padding = '10px';
+                titulo.style.textAlign = 'center';
+                titulo.style.border = '2px solid blue';
+                titulo.style.borderRadius = '10px';
+
+                // Cambios en el input
+                const inputNombre = document.getElementById('nombre');
+                console.log("Nombre ingresado: ", inputNombre.value);
+            </script>
+        </section>
+
+        <section>
+            <h1>2️⃣ document.querySelector</h1>
+            <p class="texto">Primer párrafo</p>
+            <p class="texto">Segundo párrafo</p>
+            <p></p>
+            <hr>
+            <div id="contenedor">Texto original</div>
+            <hr>
+            <p class="resaltado">Otro párrafo</p>
+            <div class="resaltado">Div</div>
+            <div class="resaltado">Div2</div>
+            <div class="resaltado">Div3</div>
+            <script>
+                const parrafos = document.querySelector('.texto');
+                parrafos.style.backgroundColor = 'lightblue';
+
+                const contenedor = document.querySelector('#contenedor');
+                contenedor.innerHTML = '<b> Texto modificado con querySelector </b>';
+
+                const parrafoResaltado = document.querySelectorAll('div.resaltado');
+                parrafoResaltado[2].style.fontSize = '1.5em';
+                parrafoResaltado[2].style.color = 'red';
+                parrafoResaltado[2].style.border = '2px dashed blue';
+                parrafoResaltado[2].style.borderRadius = '10px';
+                parrafoResaltado[2].style.backgroundColor = 'white';
+            </script>
+        </section>
+
+        <section>
+            <h1>3️⃣ document.querySelectorAll</h1>
+            <p class="item">Item 1</p>
+            <p class="item">Item 2</p>
+            <p class="item">Item 3</p>
+            <p class="item">Item 4</p>
+            <p class="ocultar">Item 5</p>
+            <p class="ocultar">Item 6</p>
+            <p class="ocultar">Item 7</p>
+            <p class="ocultar">Item 8</p>
+            <hr>
+            <li>Manzana</li>
+            <li>Banana</li>
+            <li>Pera</li>
+        
+            <script>
+                const items = document.querySelectorAll('.item');
+                items.forEach((p, index) => {
+                    p.style.backgroundColor = index % 2 === 0 ? 'lightgray' : 'lightgreen';
+                    p.style.padding = '5px';
+                    p.style.border = '1px solid black';
+                    p.style.borderRadius = '5px';
+                    p.style.textAlign = 'center';
+
+                });
+                const productos = document.querySelectorAll('li');
+                productos.forEach((li, index) => {
+                    li.textContent = `${index + 1}. ${li.textContent}`;
+                });
+                productos.forEach(p => p.style.color = "blue");
+                const ocultar = document.querySelectorAll('.ocultar');
+                ocultar.forEach(p => p.style.display = 'none');
+            </script>
+        </section>
+    </main>
+</body>
+</html>

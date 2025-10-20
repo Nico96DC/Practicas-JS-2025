@@ -1,4 +1,4 @@
-let eleccion, resultadoLogico, ej6Completado = false;
+let resultadoLogico, ej6Completado = false;
 
 function ejercicio1() {
     console.log("1. Crea una variable nombre con tu nombre y úsala para imprimir un mensaje.");
