@@ -7,7 +7,6 @@ function ejercicio1() {
 
 function ejercicio2() {
     console.log("2. Haz que un campo de texto cambie su color de fondo al escribir en él.");
-    document.getElementById('ej2');
     const texto = document.getElementById('textoEj2');
     texto.addEventListener('input', function () {
         this.style.backgroundColor = 'lightgreen';
@@ -22,7 +21,6 @@ function ejercicio3() {
     boton.addEventListener('click', function () {
         conteo++;
         this.innerText = `Contador: ${conteo}`
-        contador.textContent = conteo;
         return conteo;
     });
 }

@@ -1,3 +1,63 @@
+/*
+function limpiarConsola() {
+    let limpiado;
+    do {
+        limpiado = prompt("¿Se limpia la consola? (s/n):").toLowerCase();
+    } while (limpiado !== 's' && limpiado !== 'n');
+    if (limpiado === 's') {
+        console.clear();
+    }
+}
+
+function realizarOperacion() {
+    let num1 = prompt("Script de calculadora\nIngresa el primer número para la operación:");
+    console.log(`Primer número ingresado: ${num1}`);
+    let num2 = prompt("Ingresa el segundo número para la operación:");
+    console.log(`Segundo número ingresado: ${num2}`);
+
+    let operacion = prompt("Ingresa el operador (+, -, *, /):");
+    switch (operacion) {
+        case "+":
+            const suma = Number(num1) + Number(num2);
+            console.log(`Resultado: ${num1} + ${num2} = ${suma}`);
+            alert(`Resultado: ${num1} + ${num2} = ${suma}`);
+            break;
+        case "-":
+            const resta = Number(num1) - Number(num2);
+            console.log(`Resultado: ${num1} - ${num2} = ${resta}`);
+            alert(`Resultado: ${num1} - ${num2} = ${resta}`);
+            break;
+        case "*":
+            const multiplicacion = Number(num1) * Number(num2);
+            console.log(`Resultado: ${num1} * ${num2} = ${multiplicacion}`);
+            alert(`Resultado: ${num1} * ${num2} = ${multiplicacion}`);
+            break;
+        case "/":
+            if (Number(num2) !== 0) {
+                const division = Number(num1) / Number(num2);
+                console.log(`Resultado: ${num1} / ${num2} = ${division}`);
+                alert(`Resultado: ${num1} / ${num2} = ${division}`);
+            } else {
+                console.log("Error: División por cero no permitida.");
+                alert("Error: División por cero no permitida.");
+            }
+            break;
+        default:
+            alert("Operador inválido. Solo se permiten +, -, * o /.");
+            console.log("Error: Operador inválido.");
+            break;
+    }
+}
+
+let respuesta;
+do {
+    realizarOperacion();
+    limpiarConsola();
+    do {
+        respuesta = prompt("¿Deseas realizar otra operación? (s/n):").toLowerCase();
+    } while (respuesta !== 's' && respuesta !== 'n');
+} while (respuesta !== 'n');
+
 // Persona, numero, fruta, auto, musica
 const Persona = {
     nombre: "Raul",
@@ -60,63 +120,29 @@ const musica = {
 }
 console.log(musica.cancionFavorita());
 
-/*
-function limpiarConsola() {
-    let limpiado;
-    do {
-        limpiado = prompt("¿Se limpia la consola? (s/n):").toLowerCase();
-    } while (limpiado !== 's' && limpiado !== 'n');
-    if (limpiado === 's') {
-        console.clear();
-    }
+let productos = [
+    { "nombre": "Laptop", "precio": 800000, "cantidad": 2 },
+    { "nombre": "Mouse", "precio": 5000, "cantidad": 5 },
+    { "nombre": "Teclado", "precio": 12000, "cantidad": 3 }
+]
+console.log(productos);
+
+function agregarProductos(nombre, precio, cantidad) {
+    productos.push({ "nombre": "Monitor", "precio": 150000, "cantidad": 4 });   
+    console.log(productos.push());
+    console.log(productos);
 }
 
-function realizarOperacion() {
-    let num1 = prompt("Script de calculadora\nIngresa el primer número para la operación:");
-    console.log(`Primer número ingresado: ${num1}`);
-    let num2 = prompt("Ingresa el segundo número para la operación:");
-    console.log(`Segundo número ingresado: ${num2}`);
-
-    let operacion = prompt("Ingresa el operador (+, -, *, /):");
-    switch (operacion) {
-        case "+":
-            const suma = Number(num1) + Number(num2);
-            console.log(`Resultado: ${num1} + ${num2} = ${suma}`);
-            alert(`Resultado: ${num1} + ${num2} = ${suma}`);
-            break;
-        case "-":
-            const resta = Number(num1) - Number(num2);
-            console.log(`Resultado: ${num1} - ${num2} = ${resta}`);
-            alert(`Resultado: ${num1} - ${num2} = ${resta}`);
-            break;
-        case "*":
-            const multiplicacion = Number(num1) * Number(num2);
-            console.log(`Resultado: ${num1} * ${num2} = ${multiplicacion}`);
-            alert(`Resultado: ${num1} * ${num2} = ${multiplicacion}`);
-            break;
-        case "/":
-            if (Number(num2) !== 0) {
-                const division = Number(num1) / Number(num2);
-                console.log(`Resultado: ${num1} / ${num2} = ${division}`);
-                alert(`Resultado: ${num1} / ${num2} = ${division}`);
-            } else {
-                console.log("Error: División por cero no permitida.");
-                alert("Error: División por cero no permitida.");
-            }
-            break;
-        default:
-            alert("Operador inválido. Solo se permiten +, -, * o /.");
-            console.log("Error: Operador inválido.");
-            break;
-    }
+function calcularCostoTotal(){
+    return productos.reduce((total, producto) => total + (producto.precio + producto.cantidad), 0);
 }
 
-let respuesta;
-do {
-    realizarOperacion();
-    limpiarConsola();
-    do {
-        respuesta = prompt("¿Deseas realizar otra operación? (s/n):").toLowerCase();
-    } while (respuesta !== 's' && respuesta !== 'n');
-} while (respuesta !== 'n');
+function filtrarProductosPorPrecio(precioMinimo) {
+    return productos.filter(producto => producto.precio >= precioMinimo);
+}
+
+console.log("JSON de productos:", JSON.stringify(productos, null, 2));
+agregarProductos("Monitor", 150000, 4);
+console.log("Costo total de productos:", calcularCostoTotal());
+console.log("Productos con precio mayor o igual a 10000:", filtrarProductosPorPrecio(10000));
 */
