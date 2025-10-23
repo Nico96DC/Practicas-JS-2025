@@ -15,12 +15,10 @@
         <h2>Selecciona el script a ejecutar:</h2>
         <button id="ej1">1. Mensaje en consola ante un clic.</button>
         <button id="ej2">2. Cambio de color de un texto al escribir.</button>
-        <input id="textoEj2"></input>
+        <input id="textoEj2" disabled></input>
         <button id="ej3">3. Contador ascendente con un botón.</button>
-        <button id="botonEj3">Contar</button>
-        <p id="contEj3"></p>
-
-        <!-- 
+        <p id="conteoEj3"></p>
+        <button id="reinicioEj3" style="display:none">Reiniciar</button>
         <button id="ej4">4. Mensaje de error en campo vacío de un formulario.</button>
         <button id="ej5">5. Posición de un elemento con hover.</button>
         <button id="ej6">6. Muestra de una tecla presionada.</button>
@@ -28,7 +26,6 @@
         <button id="ej8">8. Lista dropdown.</button>
         <button id="ej9">9. Validación de correos electrónicos.</button>
         <button id="ej0">10. Cambio de texto ante un clic.</button>
-         -->
         <button id="limpieza">Limpiar consola</button>
         <button id="salida">Volver al menú anterior</button>
     </div>
@@ -43,7 +40,6 @@
         document.getElementById('ej3').addEventListener('click', function() {
             ejercicio3();
         });
-        /*
         document.getElementById('ej4').addEventListener('click', function() {
             ejercicio4();
         });
@@ -65,7 +61,6 @@
         document.getElementById('ej10').addEventListener('click', function() {
             ejercicio10();
         });
-        */
         document.getElementById('limpieza').addEventListener('click', function() {
             console.clear();
         });

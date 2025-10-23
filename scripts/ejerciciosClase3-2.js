@@ -8,21 +8,28 @@ function ejercicio1() {
 function ejercicio2() {
     console.log("2. Haz que un campo de texto cambie su color de fondo al escribir en él.");
     const texto = document.getElementById('textoEj2');
+    texto.disabled = false;
     texto.addEventListener('input', function () {
         this.style.backgroundColor = 'lightgreen';
     }); 
 }
 
+let contadorEj3 = 0;
 function ejercicio3() {
     console.log("3. Implementa un contador que aumente cada vez que se haga clic en un botón.");
-    document.getElementById('ej3');
-    let conteo = 0;
-    const boton = document.getElementById('botonEj3');
-    boton.addEventListener('click', function () {
-        conteo++;
-        this.innerText = `Contador: ${conteo}`
-        return conteo;
-    });
+    const textoCont = document.getElementById('conteoEj3');
+    let reinicioBtn = document.getElementById('reinicioEj3');
+    reinicioBtn.style.display = '';
+    if (reinicioBtn) {
+        reinicioBtn.addEventListener('click', function() {
+            contadorEj3 = 0;
+        });
+    }
+    textoCont.innerText = `Contador: ${contadorEj3}`;
+    if (!textoCont)
+        return console.warn("Contador no encontrado.");
+    contadorEj3++;
+    textoCont.textContent = `Contador: ${contadorEj3}`;
 }
 
 function ejercicio4() {

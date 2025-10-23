@@ -66,11 +66,19 @@
 }
 
 #opciones #salida {
-    background-color: #f44336;
-}
+	background-color: #f44336;
+}	
 
 #opciones #salida:hover {
-    background-color: #da190b;
+	background-color: #da190b;
+}
+
+#opciones #reinicioEj3 {
+	background-color: orange;
+}
+
+#opciones #reinicioEj3:hover {
+	background-color: #cc7a00;
 }
 
 #opciones #limpieza {

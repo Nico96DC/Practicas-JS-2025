@@ -20,13 +20,11 @@ let arreglos = [
 console.log("Arreglo inicial:", arreglos);
 
 function ejercicio1() {
-    document.getElementById("ej1");
     console.log("1. Crea un arreglo con 5 números y muestra el tercero en consola.");
     console.log("Tercer arreglo:", arreglos[2]);
 }
 
 function ejercicio2() {
-    document.getElementById("ej2");
     console.log("2. Agrega un nuevo elemento a un arreglo usando push.");
     console.log("Arreglo original:", arreglos);
     console.log("Longitud original:", arreglos.length);
@@ -66,18 +64,42 @@ function ejercicio5() {
 }
 
 function ejercicio6() {
+    console.log("6. Declara un objeto con las propiedades nombre, edad, y profesión.");
+    const persona = {
+        nombre: "Juan Pérez",
+        edad: 30,
+        profesion: "Desarrollador"
+    };
+    console.log("Objeto persona:", persona);
 }
 
 function ejercicio7() {
+    console.log("7. Accede y muestra el valor de una propiedad de un objeto.");
+    const persona = {
+        nombre: "Juan Pérez",
+        edad: 30,
+        desarrollador: "Desarrollador"
+    }
+    console.log("Nombre de la persona:", persona.nombre);
 }
 
 function ejercicio8() {
+    console.log("8. Agrega un método a un objeto que devuelva un saludo personalizado.");
+    const persona = {
+        nombre: "Ana Gómez",
+        edad: 28,
+        profesion: "Diseñadora"
+    }
+    function saludo() {
+        return `Hola, mi nombre es ${this.nombre}, tengo ${this.edad} años y soy ${this.profesion}.`;
+    }
+    console.log(saludo());
 }
 
 function ejercicio9() {
+    console.log("9. Usa reduce para sumar todos los números de un arreglo.");
 }
 
 function ejercicio10() {
+    console.log("10. Combina arreglos y objetos: Crea un arreglo de objetos y recórrelo para mostrar el nombre de cada elemento.");
 }
-
-
